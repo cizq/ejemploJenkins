@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //Aquí debes poner tu github
-		sh 'docker build -t https://github.com/psegarrac/EjemploDockerHub .'
+		sh 'docker build -t https://hub.docker.com/r/cizq223/dockerhub .'
             }
         }
         stage('DockerHUB Login') {
@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Push') {
             steps {
 		//Aquí debes poner tu github
-                sh 'docker push https://github.com/psegarrac/EjemploDockerHub'
+                sh 'docker push hhttps://hub.docker.com/r/cizq223/dockerhub'
                 }
             }
         }

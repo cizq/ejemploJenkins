@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //Aquí debes poner tu github
-		sh 'docker build -t https://github.com/cizq/ejemploJenkins .'
+		sh 'docker build -t /cizq/ejemploJenkins .'
             }
         }
         stage('DockerHUB Login') {
@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Push') {
             steps {
 		//Aquí debes poner tu github
-                sh 'docker push hhttps://hub.docker.com/r/cizq223/dockerhub'
+                sh 'docker push /cizq223/dockerhub'
                 }
             }
         }
